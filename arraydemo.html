@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div1"></div>
+  
+ <ul id="listFruits"></ul>
+<script>
+   // const numbers = [1,2,3,4,5,6,7,8,9,10];
+   const numbers = new Array(1,2,3,4);
+  //  numbers.forEach(AddNumbers);
+  //  function AddNumbers(value,index , numbers)
+  //  {
+  //    console.log("Value " + value + " Index " + index );
+    
+  //  }
+
+   numbers.map(item => { 
+    var sum =0; 
+    console.log(item);
+   sum+=item;});
+  console.log("Sum is " + sum);
+
+
+    var sum = 0;
+    for(var i = 0;i<numbers.length;i++)
+     sum+= numbers[i];
+     console.log("Sum is " + sum);
+   // console.log(numbers[i]);
+   const copyOfArray = numbers;
+   document.getElementById("div1").innerHTML  = numbers;
+   const person = {name : 'Ajay' , address:'Delhi'};
+   console.log(person.name);
+   const fruits = ['Apple' ,'Orange','PineApple'];
+   var text ="";
+  for(var i=0;i<fruits.length;i++)
+{
+       text+= "<li>" + fruits[i] + "</li>";
+}
+
+ document.getElementById("listFruits").innerHTML= text;
+
+
+
+
+
+
+
+  </script>
+ 
+</body>
+</html>

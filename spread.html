@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(Math.max(1,2,3,4));
+    const numbers = [1,2,4,5,10,90,67];
+    console.log(Math.max(numbers));
+     console.log(Math.max(...numbers))
+     let person = {'name':'Ajay', 'address' :'Delhi'};
+    //  var p = person;
+    //  console.log(person, p);
+    //  p.name = "Deepak";
+    //  console.log(person, p);
+     var p1 = {...person};
+     console.log(person, p1);
+     p1.name="New Name";
+     console.log(person, p1);
+     
+     var  batch= {'code':'B001', 'marks' : 90};
+
+    var  student = {...person, ...batch};
+    console.log(student);
+    
+    student = {...person, 'course' :'C001', ...batch};
+    console.log(student);
+
+    var n1 =[1,2,3];
+    var n2 =[3,4,5,6,7,9];
+    var n3 = [...n1 , ...n2, 9,3,4];
+    console.log(n3);
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

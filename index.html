@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js"> </script>
+  <script>
+    AddArray();
+     ArrayDemo();
+     function AddArray()
+     {
+       var no =[1,2,3,4,5,6,7,8,9,10];
+       var sum=0;
+       for(var i=0;i<no.length;i++)
+       sum+= no[i];
+       console.log(sum);
+       var res = no.map(item=> { sum+= item;})
+       console.log(sum);
+     }
+    function ArrayDemo()
+    {
+      var a1 = [1,2,3], a2 = [];
+
+a2 = a2.concat(a1);
+
+// or ES5 shorten alternative 
+// var a1 = [1,2,3], a2 = [].concat(a1);
+
+// or better ES6 shorten alternative 
+// a2 = [...a1];
+
+a2.push(4);
+
+console.log(a1, a2);
+
+// a1 -> [1,2,3], a2 -> [1,2,3,4]
+      // Array of objects
+      var array = [
+    {key:'k1',value:'v1'},
+    {key:'k2',value:'v2'},
+    {key:'k3',value:'v3'}
+];
+var mapped = array .map(item => ({ [item.key]: item.value }) );
+console.log(mapped);
+var newObj = Object.assign({}, ...mapped );
+console.log(newObj );
+
+    }
+     function Add()
+     {
+        hello();
+        var no1 = parseInt(document.getElementById("txtNo1").value);
+        var no2 = parseInt(document.getElementById("txtNo2").value);
+        //console.log(no1 + no2);
+        document.getElementById("txtResult").value = no1 + no2;
+     }
+     function Subtract()
+     {
+      var no1 = parseInt(document.getElementById("txtNo1").value);
+        var no2 = parseInt(document.getElementById("txtNo2").value);
+       // console.log(no1 + no2);
+        document.getElementById("txtResult").value = no1 - no2;
+     }
+  </script>
+    <!-- <script>
+      // alert("Hello");
+      console.log("Hello GM");
+      var no1=  document.getElementById("txtNo1").value;
+      console.log(no1);
+      </script> -->
+</head>
+<body>
+  Hello 
+  <form>
+    <div>
+      <label for="txtNo1"> Enter No 1 </label>
+      <input type="number" name="txtNo1" id="txtNo1"/>
+    </div>
+    <div>
+      <label for="txtNo2"> Enter No 2 </label>
+      <input type="number" name="txtNo2" id="txtNo2"/>
+    </div>
+    <div>
+      <label for="txtResult"> Result </label>
+      <input type="number" name="txtResult" id="txtResult"/>
+    </div>
+    <div>
+      <!-- <button type="button" onclick="alert(document.getElementById('txtNo1').value)";> Add </button>
+       -->
+
+       <button type="button" onclick="Add()";> Add </button>
+       <button type="button" onclick="Subtract()"> Subtract </button>
+    </div>
+  </form>
+  <!-- <script>
+    console.log("In Body element");
+    console.log(document.getElementById("txtNo1").value);
+  </script> -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function Add(num)
+    // {
+    //   var sum = 0;
+    //    num.map(item=>{ sum += item;} )
+    //    console.log("Sum is "  + sum);
+
+    // }
+    function Add(...num)  // Rest operator 
+    {
+      var sum = 0;
+       num.map(item=>{ sum += item;} )
+       console.log("Sum is "  + sum);
+
+    }
+  // var num= [1,2,3,4,9,90,23,232,323,23,2];
+</script>
+  <button type="button" onclick="Add(1,2,3,4)"> Add </button>
+</body>
+</html>

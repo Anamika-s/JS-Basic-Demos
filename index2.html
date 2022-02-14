@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function ChangeDivValue()
+    {
+      document.getElementById("div1").innerHTML = "Text is changed";
+    }
+  </script>
+</head>
+<body onload="ChangeDivValue()">
+  <div id="div1"> Hello  </div>
+  <form>
+<div>
+     <label for="txtNo"> Enter No </label>
+     <input type="number" id="txtNo" name="txtNo"/>
+</div>
+ <button type="button" onclick="EvenOrOdd()"> Check for Even Or Odd  </button>
+
+  </form>
+
+  <script>
+    function EvenOrOdd()
+    {
+     var no = parseInt(document.getElementById("txtNo").value);
+    if(no%2==0)
+      console.log("Even");
+    else 
+      console.log("Odd");
+
+
+
+
+
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

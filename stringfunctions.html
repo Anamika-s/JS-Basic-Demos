@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="script.js"></script>
+  <script>
+    function GetName()
+    {
+      
+       var name  = prompt("Enter Name");
+       var val = document.getElementById("txtName").value = name;
+    return val;
+    }
+    function GetLength()
+  {  var name = GetName(); 
+     console.log(name.length);
+     console.log(name.toUpperCase());
+     
+      
+  }
+  function call()
+  {
+    console.log("Hello");
+  }
+   
+  function mOver(obj)
+  {
+    obj.innerHTML ="Thank you";
+  }
+
+  function mOut(obj)
+  {
+    obj.innerHTML="Mouse moving";
+  }
+    </script>
+    <div style="background-color: blueviolet ; width: 200px ; height: 200px;" onmouseover="mOver(this)" onmouseout="mOut(this)"> Mouse Over  </div>
+    <form>
+      <label for="txtName"> Enter Name </label>
+      <input type="text" name="txtName" id="txtName" onchange="call()" onfocus="ChangeStyle(this)"/>
+      <button type="button" onclick="GetLength()"> Get Characters  </button>  
+    </form>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
